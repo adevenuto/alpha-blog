@@ -22,14 +22,17 @@ header {
   margin-top: 10px;
 }
 .nav-background {
-  -webkit-transition: background-color 0.5s ease;
-  -moz-transition: background-color 0.5s ease;
-  -o-transition: background-color 0.5s ease;
-  transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.4s ease;
+  -moz-transition: background-color 0.4s ease;
+  -o-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
   background: #A5A2A2;
 }
 .nav-background:hover {
   background: #85A442;
+}
+.add_button:hover {
+  background: #000;
 }
 li {
   float: left;
