@@ -34,14 +34,23 @@ header {
 .add_button:hover {
   background: #000;
 }
+.logo {
+  margin-right: 36px;
+  margin-left: 7px;
+}
 li {
   float: left;
   border-right: 1px solid #fff;
-  height: 30px;
-  padding: 5px 20px;
-  line-height: 29px;
+  height: 21px;
+  padding: 5px 10px;
+  line-height: 22px;
   font-family: helvetica;
   font-weight: 100;
+}
+.input-errors {
+  float: none;
+  padding: 0;
+  height: 0;
 }
 #nav-right {
   float: right;
