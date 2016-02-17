@@ -1,29 +1,4 @@
 <h1>This is where new articles are built</h1>
 
-<!-- displays errors based on validations -->
-<% if @article.errors.any? %>
-<h3>These errors prevented the article from being created</h3>
-  <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-    <li class="input-errors"><%= msg %></li>
-    <% end %>
-  </ul>
-<% end %>
-<br/>
-<br/>
-
-<%= form_for @article do |f| %>
-  <p>
-    <%= f.label :title %><br/>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :description %><br/>
-    <%= f.text_area :description %><br/>
-  </p>
-  <p>
-    <%= f.submit %>
-    <button><%= link_to "Articles", articles_path, :class => "buttons" %></button>
-  </p>
-<% end %>
+<%= render 'form' %>
 
