@@ -1,13 +1,17 @@
 class ArticlesController < ApplicationController
+  # calls the helper method set_article_params
+  before_action :set_article_params, only: [:edit, :update, :show, :destroy]
   def index
     @articles = Article.all
   end
+
   def new
     @article = Article.new
   end
+
   def edit
-    @article = Article.find(params[:id])
   end
+
   def create
     @article = Article.new(article_params)
     # renders in application.html.erb
@@ -18,8 +22,8 @@ class ArticlesController < ApplicationController
       render 'new'
     end
   end
+
   def update
-    @article = Article.find(params[:id])
     if @article.update(article_params)
       flash[:notice] = "Article was successfully updated"
       redirect_to article_path(@article)
@@ -27,17 +31,21 @@ class ArticlesController < ApplicationController
       render 'edit'
     end
   end
+
   def show
-    @article = Article.find(params[:id])
   end
+
   def destroy
-    @article = Article.find(params[:id])
     @article.destroy
     redirect_to articles_path
     flash[:notice] = "Article was successfully deleted"
   end
 
   private
+
+  def set_article_params
+    @article = Article.find(params[:id])
+  end
 
   def article_params
     params.require(:article).permit(:title, :description)
