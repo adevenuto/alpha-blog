@@ -15,7 +15,7 @@ a {
   text-decoration: none;
   color: #fff;
 }
-.edit-button {
+.buttons {
   color: #000;
 }
 
@@ -34,8 +34,14 @@ header {
 .nav-background:hover {
   background: #85A442;
 }
-.add_button:hover {
+.add-button {
+  background: #676565;
+}
+.add-button:hover {
   background: #000;
+}
+.article-button:hover {
+    background: rgba(247, 93, 34, 0.78);
 }
 .logo {
   margin-right: 36px;

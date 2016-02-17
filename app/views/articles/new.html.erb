@@ -11,7 +11,7 @@
 <% end %>
 <br/>
 <br/>
-<!-- New article form -->
+
 <%= form_for @article do |f| %>
   <p>
     <%= f.label :title %><br/>
@@ -23,6 +23,7 @@
   </p>
   <p>
     <%= f.submit %>
+    <button><%= link_to "Articles", articles_path, :class => "buttons" %></button>
   </p>
 <% end %>
 
