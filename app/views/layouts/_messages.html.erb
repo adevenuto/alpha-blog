@@ -1,7 +1,7 @@
 <!-- displays success message from create action -->
-<% flash.each do |name, msg| %>
+<% flash.each do |success, msg| %>
   <ul>
-    <li><%= msg %></li>
+    <li class="<%= success %>-message"><%= msg %></li>
   </ul>
 <% end %>
 <br/>

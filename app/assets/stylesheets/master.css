@@ -1,4 +1,7 @@
-html {
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/*html {
   width: 100%;
   height: 100%;
 }
@@ -7,7 +10,6 @@ body,ul,li {
   padding: 0;
   list-style-type: none;
 }
-/* temp */
 h1 {
   text-align: center;
 }
@@ -47,6 +49,9 @@ header {
   margin-right: 36px;
   margin-left: 7px;
 }
+.success-message {
+  color: green;
+}
 li {
   float: left;
   border-right: 1px solid #fff;
@@ -67,4 +72,4 @@ li {
 
 @media (max-width: 347px) {
 
-}
+}*/
