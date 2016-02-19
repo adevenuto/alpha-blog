@@ -1,0 +1,52 @@
+$navbar-background: #D0D1D2;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.navbar-default {
+  border-radius: 0;
+  // border-bottom: 1px solid rgba(247,93,34,0.78);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #727272;
+  background: $navbar-background;
+  webkit-box-shadow: 0px 1px 10px 0px #020202;
+   -moz-box-shadow: 0px 1px 10px 0px #020202;
+   box-shadow: 0px 1px 10px 0px #020202;
+}
+.border-bottom {
+  border-bottom: 2px solid #91B342;
+}
+.border-bottom-article {
+  border-bottom: 2px solid rgba(247,93,34,0.78);
+}
+.navbar-default .navbar-brand {
+    color: #000;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 22px;
+}
+.navbar-inverse .navbar-toggle {
+  border-color: #CBFD02;
+}
+.navbar-nav > li > a:hover {
+    color: #fff;
+}
+.navbar-nav > li:hover {
+  -webkit-transition: background-color 0.6s ease;
+  -moz-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+  background: #91B342;
+}
+.navbar-nav .nav-articles-button:hover {
+    -webkit-transition: background-color 0.6s ease;
+    -moz-transition: background-color 0.6s ease;
+    -o-transition: background-color 0.6s ease;
+    transition: background-color 0.6s ease;
+    background: rgba(247,93,34,0.78);
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #fff;
+}
