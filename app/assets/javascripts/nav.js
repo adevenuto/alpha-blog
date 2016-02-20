@@ -1,4 +1,4 @@
-// This controls the border-bottom on nav links
+// This controls the border-bottom effect on nav links
 $(function() {
   $(".nav-buttons").hover(
     function() {
