@@ -1,11 +1,7 @@
 $(function(){
 
-  // $(".element").typed({
-  //   strings: ["Its your world ^1000", "Talk about it! ^1000", "^2000 Sign up now!"],
-  //   typeSpeed: 0
-  // });
-  $(".element1").typed({
-    strings: ["Welcome To Superfund ^2000", "The future of investing"],
+  $(".element").typed({
+    strings: ["Its your world ^1000", "Talk about it! ^1000", "^2000 Sign up now!"],
     typeSpeed: 0
   });
 
@@ -14,7 +10,7 @@ $(function(){
       // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
       stringsElement: null,
       // typing speed
-      typeSpeed: 10,
+      typeSpeed: 0,
       // time before typing starts
       startDelay: 0,
       // backspacing speed
