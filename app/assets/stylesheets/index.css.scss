@@ -10,6 +10,7 @@ $jumbotron-font-color: #fff;
 }
 .typed-text {
   color: $jumbotron-font-color;
+  font-size: 2em;
 }
 .jumbotron {
   width: 95%;
@@ -23,6 +24,7 @@ $jumbotron-font-color: #fff;
 }
 .typed-cursor {
   color: #D0D1D2;
+  font-size: 2em;
 }
 
 // blinking cursor for typed.js effect
