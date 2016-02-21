@@ -1,5 +1,4 @@
 $(function(){
-
   $(".element").typed({
     strings: ["Its your world ^1000", "Talk about it! ^1000", "^2000 Sign up now!"],
     typeSpeed: 0
