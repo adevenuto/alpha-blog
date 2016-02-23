@@ -1,24 +1,54 @@
-<!-- displays errors based on validations -->
-<% if @article.errors.any? %>
-<h3>These errors prevented the article from being created</h3>
-  <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-    <li class="input-errors"><%= msg %></li>
+<script>
+$(function(){
+  var counter = 0;
+
+    <% if @article.errors.any? %>
+      $(".submit").attr("disabled", true);
+
+      <% if @article.errors.include?(:title) %>
+        var titleField = $(".title").attr("value", "<%= sanitize @article.errors[:title].first %>");
+        titleField.attr("id","error");
+
+        $(".title").click(function() {
+          $(this).attr("value", " ");
+          $(this).removeAttr("id", "error");
+          counter += 1;
+          enableSubmit();
+        });
+      <% end %>
+
+      <% if @article.errors.include?(:description) %>
+        var descriptionField = $(".description").html("<%= @article.errors[:description].first %>");
+        descriptionField.attr("id","error");
+
+        $(".description").click(function() {
+          $(this).html("");
+          $(this).removeAttr("id", "error");
+          counter += 1;
+          enableSubmit();
+        });
+      <% end %>
+
+      function enableSubmit() {
+        if (counter >= 2 ) {
+          counter = 0;
+          $(".submit").attr("disabled", false);
+        }
+      }
+
     <% end %>
-  </ul>
-<% end %>
-<br/>
-<br/>
+});
+</script>
 
 <div class="row">
   <div class="col-xs-12">
-    <%= form_for(@article, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+    <%= form_for(@article, :validate => true, :html => {class: "form-horizontal", role: "form"}) do |f| %>
       <div class="form-group">
         <div class="control-label col-xs-2">
           <%= f.label :title %>
         </div>
         <div class="col-sm-8">
-          <%= f.text_field :title, class: "form-control", placeholder: "Title", autofocus: "true" %>
+          <%= f.text_field :title, class: "form-control title", placeholder: "Title", autofocus: "true" %>
         </div>
       </div>
       <div class="form-group">
@@ -26,15 +56,16 @@
           <%= f.label :description %><br/>
         </div>
         <div class="col-sm-8">
-          <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Description" %><br/>
+          <%= f.text_area :description, rows: 10, class: "form-control description", placeholder: "Description" %><br/>
         </div>
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <%= f.submit class: "btn btn-success btn-sm" %>
+          <%= f.submit class: "btn btn-success btn-sm submit" %>
           <button class="btn btn-info btn-sm"><%= link_to "Articles", articles_path %></button>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+
