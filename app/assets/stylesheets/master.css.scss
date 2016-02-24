@@ -1,3 +1,4 @@
+
 button a:hover, button a:visited, button a:link, button a:active {
   text-decoration: none;
   color: #fff;
@@ -7,13 +8,50 @@ button a:hover, button a:visited, button a:link, button a:active {
 }
 .left {
   text-align: left;
-  text-indent: 50px;
 }
 hr.divider {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(173,172,172,0.75), rgba(0, 0, 0, 0));
 }
+
+.field_with_errors input::-webkit-input-placeholder {
+  color: red;
+}
+.field_with_errors textarea::-webkit-input-placeholder {
+  color: red;
+}
+.field_with_errors input::-moz-placeholder {
+  color: red;
+}
+.field_with_errors textarea::-moz-placeholder {
+  color: red;
+}
+.field_with_errors input:-moz-placeholder {   /* Older versions of Firefox */
+  color: red;
+}
+.field_with_errors textarea:-moz-placeholder {   /* Older versions of Firefox */
+  color: red;
+}
+.field_with_errors input:-ms-input-placeholder {
+  color: red;
+}
+.field_with_errors textarea:-ms-input-placeholder {
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
