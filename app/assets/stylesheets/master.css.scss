@@ -1,12 +1,13 @@
-.success-message {
-  color: green;
-}
 button a:hover, button a:visited, button a:link, button a:active {
   text-decoration: none;
   color: #fff;
 }
 .cntr {
   text-align: center;
+}
+.left {
+  text-align: left;
+  text-indent: 50px;
 }
 #error {
   color: red;
@@ -16,95 +17,11 @@ hr.divider {
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(173,172,172,0.75), rgba(0, 0, 0, 0));
 }
+.alert {
+  padding: 2px !important;
+  border-radius: 0;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Before Bootstrap
-
-/*html {
-  width: 100%;
-  height: 100%;
-}
-body,ul,li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-h1 {
-  text-align: center;
-}
-a {
-  text-decoration: none;
-  color: #fff;
-}
-.buttons {
-  color: #F70202;
 }
 
-header {
-  width: 100%;
-  height: 41px;
-  margin-top: 10px;
-}
-.nav-background {
-  -webkit-transition: background-color 0.4s ease;
-  -moz-transition: background-color 0.4s ease;
-  -o-transition: background-color 0.4s ease;
-  transition: background-color 0.4s ease;
-  background: #A5A2A2;
-}
-.nav-background:hover {
-  background: #85A442;
-}
-.add-button {
-  background: #676565;
-}
-.add-button:hover {
-  background: #000;
-}
-.article-button:hover {
-    background: rgba(247, 93, 34, 0.78);
-}
-.logo {
-  margin-right: 36px;
-  margin-left: 7px;
-}
-.success-message {
-  color: green;
-}
-li {
-  float: left;
-  border-right: 1px solid #fff;
-  height: 21px;
-  padding: 5px 10px;
-  line-height: 22px;
-  font-family: helvetica;
-  font-weight: 100;
-}
-.input-errors {
-  float: none;
-  padding: 0;
-}
-#nav-right {
-  float: right;
-  margin-right: 20px;
-}
 
-@media (max-width: 347px) {
 
-}*/

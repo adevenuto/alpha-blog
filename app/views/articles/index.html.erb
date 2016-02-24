@@ -1,14 +1,18 @@
-<h1>Articles list:</h1>
-<table>
-  <th>Title</th>
-  <th>Description</th>
-  <% @articles.each do |article| %>
-    <tr>
-      <td> <%= article.title %> </td>
-      <td> <%= article.description %> </td>
-      <td> <%=  link_to "edit", edit_article_path(article), :class => "buttons" %> </td>
-      <td> <%=  link_to "View", article_path(article), :class => "buttons" %> </td>
-      <td> <%=  link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, :class => "buttons" %> </td>
-    </tr>
-  <% end %>
-</table>
+<h1 class="cntr">Articles list:</h1>
+
+<% @articles.each do |article| %>
+  <div class="well col-xs-8 col-xs-offset-2">
+    <h4 class="cntr"><strong>Title: <%= article.title %></strong></h4>
+     <hr class="divider">
+     <h4 class="left"><%= article.description %></h4>
+     <div class="article-actions">
+       <%=  link_to "edit", edit_article_path(article), :class => "btn btn-primary btn-xs" %>
+       <%=  link_to "View", article_path(article), :class => "btn btn-success btn-xs" %>
+       <%=  link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, :class => "btn btn-danger btn-xs" %>
+     </div>
+
+ </div>
+<% end %>
+
+
+
