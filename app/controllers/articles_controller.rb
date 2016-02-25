@@ -14,6 +14,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    @article.user = User.first
     # renders in application.html.erb
     if @article.save
       flash[:success] = "Article was successfully created"
@@ -49,6 +50,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :description)
+    params.require(:article).permit(:title, :description, :user_id)
   end
 end
