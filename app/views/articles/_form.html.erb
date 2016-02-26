@@ -12,13 +12,13 @@
         <div class="col-sm-8">
           <%= f.text_field :title, class: "form-control title", placeholder: "Title", autofocus: "true" %>
           <% if (@article.errors.include?(:title)) %>
-              <script type="text/javascript">
-                function trigger(){
-                  $(".title").attr("placeholder", "<%= sanitize @article.errors[:title].first %>");
-                  $(".title").attr("value", null);
-                };
-                trigger();
-              </script>
+            <script type="text/javascript">
+              function trigger(){
+                $(".title").attr("placeholder", "<%= sanitize @article.errors[:title].first %>");
+                $(".title").attr("value", null);
+              };
+              trigger();
+            </script>
           <% end %>
         </div>
       </div>
@@ -29,13 +29,13 @@
         <div class="col-sm-8">
           <%= f.text_area :description, rows: 10, class: "form-control description", placeholder: "Description" %><br/>
           <% if (@article.errors.include?(:description)) %>
-              <script type="text/javascript">
-                function trigger(){
-                  $(".description").attr("placeholder", "<%= sanitize @article.errors[:description].first %>");
-                  $(".description").html(null);
-                };
-                trigger();
-              </script>
+            <script type="text/javascript">
+              function trigger(){
+                $(".description").attr("placeholder", "<%= sanitize @article.errors[:description].first %>");
+                $(".description").html(null);
+              };
+              trigger();
+            </script>
           <% end %>
         </div>
       </div>
