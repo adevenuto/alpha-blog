@@ -21,17 +21,27 @@ $navbar-background: #D0D1D2;
 .border-bottom-article {
   border-bottom: 2px solid rgba(247,93,34,0.78);
 }
+.border-bottom-brand {
+  border-bottom: 2px solid #000;
+}
 .navbar-default .navbar-brand {
-    color: #000;
-    font-family: 'Helvetica Neue', Helvetica, sans-serif;
-    font-weight: 200;
-    font-size: 22px;
+  color: #5e5e5e;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+}
+.navbar-default .navbar-brand:hover {
+  -webkit-transition: color 0.6s ease;
+  -moz-transition: color 0.6s ease;
+  -o-transition: color 0.6s ease;
+  transition: color 0.6s ease;
+  color: #000;
 }
 .navbar-inverse .navbar-toggle {
   border-color: #CBFD02;
 }
 .navbar-nav > li > a:hover {
-    color: #fff;
+  color: #fff;
 }
 .navbar-nav > li:hover {
   -webkit-transition: background-color 0.6s ease;

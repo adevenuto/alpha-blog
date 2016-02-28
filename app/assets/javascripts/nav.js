@@ -14,4 +14,11 @@ $(function() {
       $(".navbar-default").removeClass("border-bottom-article");
     }
   );
+  $(".navbar-brand").hover(
+    function() {
+      $(".navbar-default").addClass("border-bottom-brand");
+    }, function() {
+      $(".navbar-default").removeClass("border-bottom-brand");
+    }
+  );
 });
