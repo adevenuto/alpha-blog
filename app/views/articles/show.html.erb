@@ -5,6 +5,7 @@
     <p><span>Created by:</span> <%= link_to @article.user.username, "#" %></p></br>
     <p><span>Posted:</span> <%= time_ago_in_words(@article.created_at) %> ago</p></br>
     <p><span>Updated:</span> <%= time_ago_in_words(@article.updated_at) %> ago</p>
+
   </div>
   <h4 class="cntr"><strong>Description:</strong></h4>
   <hr class="divider">
