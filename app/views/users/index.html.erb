@@ -1,11 +1,9 @@
 <div class="user-info-container">
-  <div class="img-wrapper">
-    <% @users.each do |user| %>
-      <ul class="user-container">
-        <li class="gravatar"><%= gravatar_for user %></li>
-        <li><%= user.username %></li></br>
-        <li><%= user.email %></li>
-      </ul>
-    <% end %>
-  </div>
+  <% @users.each do |user| %>
+    <ul class="user-container">
+      <li class="gravatar"><%= gravatar_for user %></li>
+      <li><%= user.username %></li></br>
+      <li><%= user.email %></li>
+    </ul>
+  <% end %>
 </div>
