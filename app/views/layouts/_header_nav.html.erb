@@ -34,7 +34,8 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li class="nav-buttons"><a href="#">Sign in</a></li>
+        <li class="nav-buttons"><%= link_to "Log out", logout_path, method: :delete %></li>
+        <li class="nav-buttons"><%= link_to "Sign in", login_path %></li>
         <li class="nav-buttons"><%= link_to "Sign up", signup_path %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
