@@ -33,12 +33,12 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <!-- toggle logout button -->
-        <% if session[:user_id] != nil %>
+        <%# if session[:user_id] != nil %>
           <li class="nav-buttons logout"><%= link_to "Logout", logout_path, method: :delete, class: "logout-button" %></li>
-        <% else %>
+        <%# else %>
           <li class="nav-buttons"><%= link_to "Sign in", login_path %></li>
           <li class="nav-buttons"><%= link_to "Sign up", signup_path %></li>
-        <% end %>
+        <%# end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
