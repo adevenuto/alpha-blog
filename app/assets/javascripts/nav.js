@@ -7,11 +7,11 @@ $(function() {
       $(".navbar-default").removeClass("border-bottom");
     }
   );
-  $(".nav-articles-button").hover(
+  $(".nav-explore-button").hover(
     function() {
-      $(".navbar-default").addClass("border-bottom-article");
+      $(".navbar-default").addClass("border-bottom-explore");
     }, function() {
-      $(".navbar-default").removeClass("border-bottom-article");
+      $(".navbar-default").removeClass("border-bottom-explore");
     }
   );
   $(".navbar-brand").hover(
@@ -19,6 +19,13 @@ $(function() {
       $(".navbar-default").addClass("border-bottom-brand");
     }, function() {
       $(".navbar-default").removeClass("border-bottom-brand");
+    }
+  );
+  $(".logout-button").hover(
+    function() {
+      $(".navbar-default").addClass("border-bottom-logout");
+    }, function() {
+      $(".navbar-default").removeClass("border-bottom-logout");
     }
   );
 });
