@@ -2,7 +2,7 @@
 <div class="well col-xs-8 col-xs-offset-2">
 
   <div class="blog-info">
-    <p><span>Created by:</span> <%= link_to @article.user.username, "#" %></p></br>
+    <p><span>Created by:</span> <%= link_to @article.user.username, user_path(@article.user) %></p></br>
     <p><span>Posted:</span> <%= time_ago_in_words(@article.created_at) %> ago</p></br>
     <p><span>Updated:</span> <%= time_ago_in_words(@article.updated_at) %> ago</p>
 

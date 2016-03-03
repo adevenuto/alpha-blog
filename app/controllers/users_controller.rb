@@ -29,13 +29,8 @@ class UsersController < ApplicationController
     end
   end
   def show
-    if @user = User.find(params[:id])
-      @user_auth = true
-    else
-      @user_auth = false
-    end
+    @user = User.find(params[:id])
     @user_articles = @user.articles.paginate(page: params[:page], per_page: 3)
-
   end
 
   private
