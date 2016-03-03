@@ -8,7 +8,6 @@ $navbar-border-bottom-logout: rgba(255, 0, 0, .6);
 
 .navbar-default {
   border-radius: 0;
-  // border-bottom: 1px solid rgba(247,93,34,0.78);
   border-top: none;
   border-left: none;
   border-right: none;
@@ -86,12 +85,6 @@ $navbar-border-bottom-logout: rgba(255, 0, 0, .6);
 
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
-    position: static;
-    float: none;
-    width: auto;
-    margin-top: 0;
     background-color: #D0D1D2;
-    border: 0;
-    box-shadow: none;
   }
 }

@@ -5,9 +5,15 @@ $jumbotron-font-color: #fff;
 #jumbo-header {
   color: $jumbotron-font-color;
   text-align: center;
+  font-weight: 200;
+  font-size: 5.5em;
 }
 .typed-text {
-  color: #000;
+  color: #fff;
+  font-size: 2em;
+}
+.typed-cursor {
+  color: #FF9800;
   font-size: 2em;
 }
 .jumbotron-inner {
@@ -16,23 +22,18 @@ $jumbotron-font-color: #fff;
 .jumbotron {
   width: 95%;
   margin: auto;
-  background: url("caribbean.jpg") no-repeat center center;
+  background: url("chicago.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   color: $jumbotron-font-color;
 }
-.typed-cursor {
-  color: #D0D1D2;
-  font-size: 2em;
-}
-
 
 // blinking cursor for typed.js effect
 
 .typed-cursor{
-    opacity: 1;
+    opacity: 9;
     -webkit-animation: blink 0.8s infinite;
     -moz-animation: blink 0.8s infinite;
     animation: blink 0.8s infinite;
