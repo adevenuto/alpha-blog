@@ -7,7 +7,7 @@
     <%=  link_to "edit", edit_article_path(article), :class => "btn btn-primary btn-xs" %>
     <%=  link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, :class => "btn btn-danger btn-xs" %>
     <small class="pull-right">
-    <span>Created by:</span> <%= article.user.username %></br>
+    <span>Created by:</span> <%= link_to article.user.username, user_path(article.user) %></br>
     <span>Posted:</span> <%= time_ago_in_words(article.created_at) %> ago</br>
     <span>Updated:</span> <%= time_ago_in_words(article.updated_at) %> ago
     </small>

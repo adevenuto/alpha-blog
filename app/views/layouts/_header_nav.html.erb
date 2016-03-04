@@ -20,7 +20,9 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explore<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li class="nav-sub-explore-dropdown"><%= link_to "Articles", articles_path %></li>
-            <li class="nav-sub-explore-dropdown"><%= link_to "Create Article", new_article_path %>
+            <% if logged_in? %>
+              <li class="nav-sub-explore-dropdown"><%= link_to "Create Article", new_article_path %>
+            <% end %>
             <li class="nav-sub-explore-dropdown"><%= link_to "Users", users_path %></li></li>
           </ul>
         </li>
@@ -31,13 +33,22 @@
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
+        <!-- navigation right -->
       <ul class="nav navbar-nav navbar-right">
         <!-- toggle logout button -->
         <% if !logged_in? %>
           <li class="nav-buttons"><%= link_to "Sign in", login_path %></li>
           <li class="nav-buttons"><%= link_to "Sign up", signup_path %></li>
         <% else %>
+        <!-- setting dropdown menu -->
           <li class="nav-buttons logout"><%= link_to "Logout", logout_path, method: :delete, class: "logout-button" %></li>
+          <li class="dropdown settings-button">
+            <a href="#" class="dropdown-toggle glyphicon glyphicon-cog" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+            <ul class="dropdown-menu">
+              <li class="nav-sub-explore-dropdown"><%= link_to "Edit your account", edit_user_path(current_user) %></li>
+              <li class="nav-sub-explore-dropdown"><%= link_to "My Dashboard", user_path(current_user) %>
+            </ul>
+          </li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
